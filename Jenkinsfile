@@ -33,7 +33,7 @@ spec:
     image: localhost:5000/shopfront:latest
     imagePullPolicy: ""
     ports:
-    - name:http
+    - name: http
       containerPort: 8010
       protocol: TCP
     resources: {}        
