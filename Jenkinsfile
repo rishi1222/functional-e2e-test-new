@@ -19,22 +19,23 @@ spec:
     image: localhost:5000/stockmanager:latest
     imagePullPolicy: ""
     ports:
-    - name: http
-      containerPort: 8030
+    - containerPort: 8030
+      protocol: TCP
     resources: {}
   - name: productcatalogue  
     image: localhost:5000/productcatalogue:latest
     imagePullPolicy: ""
     ports:
-    - name: http
-      containerPort: 8020
+    - containerPort: 8020
+      protocol: TCP
     resources: {} 
   - name: stockmanager  
     image: localhost:5000/shopfront:latest
     imagePullPolicy: ""
     ports:
-    - name: http
+    - name:http
       containerPort: 8010
+      protocol: TCP
     resources: {}        
   restartPolicy: Always
   serviceAccountName:     
