@@ -20,7 +20,7 @@ spec:
     imagePullPolicy: ""
     ports:
     - protocol: TCP
-      port: 8030
+      containerPort: 8030
       targetPort: http
     resources: {}
   - name: productcatalogue  
@@ -28,7 +28,7 @@ spec:
     imagePullPolicy: ""
     ports:
     - protocol: TCP
-      port: 8020
+      containerPort: 8020
       targetPort: http
     resources: {} 
   - name: stockmanager  
@@ -36,7 +36,7 @@ spec:
     imagePullPolicy: ""
     ports:
     - protocol: TCP
-      port: 8020
+      containerPort: 8020
       targetPort: http
     resources: {}        
   restartPolicy: Always
