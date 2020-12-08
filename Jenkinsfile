@@ -16,10 +16,10 @@ spec:
     - cat
     tty: true
   - name: shopfront  
-    image: localhost:5000/shopfront:latest
+    image: localhost:5000/stockmanager:latest
     imagePullPolicy: ""
     ports:
-    - containerPort: 8010
+    - containerPort: 8030
     resources: {}
   - name: productcatalogue  
     image: localhost:5000/productcatalogue:latest
@@ -28,10 +28,10 @@ spec:
     - containerPort: 8020
     resources: {} 
   - name: stockmanager  
-    image: localhost:5000/stockmanager:latest
+    image: localhost:5000/shopfront:latest
     imagePullPolicy: ""
     ports:
-    - containerPort: 8030
+    - containerPort: 8010
     resources: {}        
   restartPolicy: Always
   serviceAccountName:     
@@ -51,7 +51,7 @@ spec:
         stage('e2e test') {
             steps {
                 container('maven') {
-                    sh 'mvn clean test'
+                    sh 'mvn test'
                 }
             }
         }
