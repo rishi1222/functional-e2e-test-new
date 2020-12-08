@@ -36,7 +36,7 @@ spec:
     imagePullPolicy: ""
     ports:
     - protocol: TCP
-      containerPort: 8020
+      containerPort: 8010
       targetPort: http
     resources: {}        
   restartPolicy: Always
