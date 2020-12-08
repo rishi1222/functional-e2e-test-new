@@ -7,6 +7,12 @@
     <groupId>org.com.nt</groupId>
     <artifactId>functiona-e2e-test</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -26,5 +32,82 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <profiles>
+        <profile>
+            <id>nexus</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>nexus</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/releases</url>
+                    <name>Maven Central</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>central</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/central</url>
+                    <name>Maven Central</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>com.ntrs.wmh.frameworks</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/releases</url>
+                    <name>Shared Framework and Services Team Repository</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>maven.oracle.com</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/maven.oracle.com</url>
+                    <name>Shared Framework and Services Team Repository maven oracle</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>3rd party</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/thirdparty</url>
+                    <name>3rd Party framework</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>osj7</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/osj7</url>
+                    <name>Maven OSJ7</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>https://repository.ntrs.com:8444/nexus/content/repositories/central</url>
+                    <name>Maven Central</name>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
 
 </project>

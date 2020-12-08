@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ShopRestIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.991 sec <<< FAILURE!
-correctNumberOfProductsReturned(ShopRestIntegrationTest)  Time elapsed: 4.915 sec  <<< ERROR!
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.942 sec <<< FAILURE!
+correctNumberOfProductsReturned(ShopRestIntegrationTest)  Time elapsed: 4.88 sec  <<< ERROR!
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
@@ -141,7 +141,7 @@ java.net.ConnectException: Connection refused: connect
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-productOneHasCorrectStockInfo(ShopRestIntegrationTest)  Time elapsed: 4.019 sec  <<< ERROR!
+productOneHasCorrectStockInfo(ShopRestIntegrationTest)  Time elapsed: 4.013 sec  <<< ERROR!
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
@@ -262,7 +262,7 @@ java.net.ConnectException: Connection refused: connect
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-productOneHasCorrectProductInfo(ShopRestIntegrationTest)  Time elapsed: 4.019 sec  <<< ERROR!
+productOneHasCorrectProductInfo(ShopRestIntegrationTest)  Time elapsed: 4.015 sec  <<< ERROR!
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
