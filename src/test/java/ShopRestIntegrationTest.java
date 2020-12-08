@@ -12,9 +12,7 @@ public class ShopRestIntegrationTest {
 
     @Test
     public void correctNumberOfProductsReturned() {
-        System.out.println(given().contentType(CONTENT_TYPE)
-                .when()
-                .get(SUT_BASE_URI + "products"));
+        System.out.println(SUT_BASE_URI + "products");
         given().contentType(CONTENT_TYPE)
                 .when()
                 .get(SUT_BASE_URI + "products")
@@ -25,9 +23,7 @@ public class ShopRestIntegrationTest {
 
     @Test
     public void productOneHasCorrectProductInfo() {
-        System.out.println(given().contentType(CONTENT_TYPE)
-                .when()
-                .get(SUT_BASE_URI + "products"));
+        System.out.println(SUT_BASE_URI + "products");
         given().contentType(CONTENT_TYPE)
                 .when()
                 .get(SUT_BASE_URI + "products")
@@ -39,6 +35,7 @@ public class ShopRestIntegrationTest {
 
     @Test
     public void productOneHasCorrectStockInfo() {
+        System.out.println(SUT_BASE_URI + "products");
         given()
                 .contentType(CONTENT_TYPE)
                 .when()
