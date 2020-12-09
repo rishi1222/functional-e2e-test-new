@@ -22,6 +22,7 @@ spec:
     - protocol: TCP
       containerPort: 8010
       targetPort: http
+      hostPort: 8010
     resources: {}      
   - name: stockmanager  
     image: localhost:5000/stockmanager:latest
@@ -30,6 +31,7 @@ spec:
     - protocol: TCP
       containerPort: 8030
       targetPort: http
+      hostPort: 8030
     resources: {}
   - name: productcatalogue  
     image: localhost:5000/productcatalogue:latest
@@ -38,6 +40,7 @@ spec:
     - protocol: TCP
       containerPort: 8020
       targetPort: http
+      hostPort: 8020
     resources: {}        
   restartPolicy: Always
   serviceAccountName:     
