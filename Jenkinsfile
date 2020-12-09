@@ -22,8 +22,7 @@ spec:
     - protocol: TCP
       containerPort: 8010
       targetPort: http
-    resources: {} 
-  initContainers:      
+    resources: {}      
   - name: stockmanager  
     image: localhost:5000/stockmanager:latest
     imagePullPolicy: ""
