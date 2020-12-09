@@ -15,7 +15,7 @@ spec:
     command:
     - cat
     tty: true
-  - name: shopfront  
+  - name: stockmanager  
     image: localhost:5000/stockmanager:latest
     imagePullPolicy: ""
     ports:
@@ -31,7 +31,7 @@ spec:
       containerPort: 8020
       targetPort: http
     resources: {} 
-  - name: stockmanager  
+  - name: shopfront  
     image: localhost:5000/shopfront:latest
     imagePullPolicy: ""
     ports:
