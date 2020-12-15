@@ -11,12 +11,12 @@ metadata:
 spec:
   containers:
   - name: maven
-    image: localhost:5000/my-maven:latest
+    image: maven:latest
     command:
     - cat
     tty: true
   - name: shopfront  
-    image: localhost:5000/shopfront:latest
+    image: danielbryantuk/djshopfront:latest
     imagePullPolicy: ""
     ports:
     - protocol: TCP
@@ -25,7 +25,7 @@ spec:
       hostPort: 8010
     resources: {}      
   - name: stockmanager  
-    image: localhost:5000/stockmanager:latest
+    image: danielbryantuk/djstockmanager:latest
     imagePullPolicy: ""
     ports:
     - protocol: TCP
@@ -34,7 +34,7 @@ spec:
       hostPort: 8030
     resources: {}
   - name: productcatalogue  
-    image: localhost:5000/productcatalogue:latest
+    image: danielbryantuk/djproductcatalogue:latest
     imagePullPolicy: ""
     ports:
     - protocol: TCP
