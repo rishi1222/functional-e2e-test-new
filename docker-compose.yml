@@ -1,7 +1,7 @@
 version: '2'
 services:
   shopfront:
-    image: danielbryantuk/djshopfront
+    image: localhost:5000/shopfront
     ports:
       - "8010:8010"
     links:
