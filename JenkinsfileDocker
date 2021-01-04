@@ -9,8 +9,7 @@ node {
             try {
                 sh 'docker-compose up -d'
                 waitUntil { // application is up
-                    sh script: 'curl -s http://localhost:8010/health | grep "UP"; echo $? > status'
-                    r=sh script:'cat status'
+                    def r = sh (script: 'curl -s http://localhost:8010/health | grep "UP"', returnStatus: false) == 0
                     echo "Build flag:${r}"
                     return (r == 0);
                 }
