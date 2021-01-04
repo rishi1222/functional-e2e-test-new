@@ -12,6 +12,7 @@ node {
                     sh script: 'curl -s http://localhost:8010/health | grep "UP"; echo $? > status'
                     r=sh script:'cat status'
                     echo "Build flag:${r}"
+                    return (r == 0);
                 }
 
                 // conduct main test here
