@@ -10,7 +10,7 @@ node {
                 sh 'docker-compose up -d'
                 waitUntil { // application is up
                     r = sh '''
-                                curl -s http://localhost:8010/health | grep "UP"', returnStatus: true
+                                curl -s http://localhost:8010/health | grep "UP", returnStatus: true
                             '''
                     echo "Build flag:${r}"
                     return (r == 0);
