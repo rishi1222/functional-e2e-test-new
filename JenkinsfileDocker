@@ -9,12 +9,12 @@ node {
             try {
                 sh 'docker-compose up -d'
                 waitUntil { // application is up
-                    def r = sh script: 'curl -s http://localhost:8010/health | grep "UP"', returnStatus: true
+                    def r = sh (script: 'curl -s http://localhost:8010/health | grep "UP"', returnStatus: true)
                     return (r == 0);
                 }
 
                 // conduct main test here
-                sh 'curl http://localhost:8010 | grep "Docker Java"'
+                sh ('curl http://localhost:8010 | grep "Docker Java"')
 
             } finally {
                 sh 'docker-compose stop'
