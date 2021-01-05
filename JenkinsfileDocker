@@ -9,7 +9,7 @@ node {
             try {
                 sh 'docker-compose up -d'
                 waitUntil { // application is up
-                    def r = sh (script: 'curl -s http://localhost:8010/',returnStdout: true)
+                    def r = sh (script: 'curl -s http://localhost:8010/health',returnStdout: true)
                     echo "Build flag:${r}"
                     if(r.contains("UP"))
                     return (r == 0);
