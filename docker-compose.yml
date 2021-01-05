@@ -4,9 +4,6 @@ services:
     image: localhost:5000/shopfront
     ports:
       - "8010:8010"
-    links:
-      - productcatalogue
-      - stockmanager
   productcatalogue:
     image: localhost:5000/productcatalogue
     ports:
