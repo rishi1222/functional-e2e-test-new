@@ -8,10 +8,10 @@ services:
       - productcatalogue
       - stockmanager
   productcatalogue:
-    image: danielbryantuk/djproductcatalogue
+    image: localhost:5000/productcatalogue
     ports:
       - "8020:8020"
   stockmanager:
-    image: danielbryantuk/djstockmanager
+    image: localhost:5000/stockmanager
     ports:
       - "8030:8030"
