@@ -4,6 +4,9 @@ services:
     build: shopfront
     ports:
      - "8010:8010"
+    links:
+      - productcatalogue
+      - stockmanager
   productcatalogue:
     build: productcatalogue
     ports:
