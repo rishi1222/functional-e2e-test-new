@@ -19,7 +19,7 @@ node {
                 sh (script:'curl http://10.169.147.22:8010 | grep "Docker Java"')
 
             } finally {
-                sh (script:'echo "Test Complete')
+                sh (script:'echo "Test Complete"')
             }
         }
     }
