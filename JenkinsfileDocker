@@ -19,9 +19,13 @@ node {
                 sh (script:'curl http://10.169.147.22:8010 | grep "Docker Java"')
 
             } finally {
-                sh 'docker-compose stop'
+                sh (script:'echo "Test Complete')
             }
         }
+    }
+
+    stage('end test'){
+        sh 'docker-compose stop'
     }
 
     stage ('deploy') {
