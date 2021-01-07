@@ -25,7 +25,7 @@ node {
     }
 
     stage('end test'){
-        sh 'docker-compose stop'
+        sh 'docker-compose down'
     }
 
     stage ('deploy') {
