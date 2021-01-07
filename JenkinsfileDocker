@@ -1,17 +1,12 @@
 node {
-    options {
-        timestamps()
-        buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
-        timeout(time: 5, unit: 'HOURS')
-        ansiColor('xterm')
-    }
+
     stage ('build') {
         git url:'https://github.com/rishi1222/functional-e2e-test-new.git'
         // conduct other build tasks
     }
 
     stage ('end-to-end tests') {
-        timeout(time: 60, unit: 'SECONDS') {
+        timeout(time: 1, unit: 'HOURS') {
             try {
                 sh 'docker-compose up -d'
                 waitUntil { // application is up
