@@ -17,7 +17,7 @@ node {
 
                 // conduct main test here
                 sh (script:'curl -s http://10.169.147.22:8010 | grep "Docker Java"')
-                sh 'mvn clean verify'
+                sh 'mvn clean test'
 
             } finally {
                 sh (script:'echo "Test Complete"')
