@@ -8,7 +8,7 @@ import static org.hamcrest.core.Is.is;
 public class ShopRestIntegrationTest {
 
     private static final ContentType CONTENT_TYPE = ContentType.JSON;
-    private static final String SUT_BASE_URI = "http://localhost:8010/";
+    private static final String SUT_BASE_URI = "http://10.169.147.22:8010/";
 
     @Test
     public void correctNumberOfProductsReturned() {
